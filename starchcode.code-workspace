@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../CodeCademy/04 - Getting More Advanced With Design - Tea Cozy"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Portfolio - Starchcode v1.0"
+	}
+}

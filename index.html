@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>🥔starchcode</title>
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@200;400;700;800;900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 400, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+</head>
+
+
+<script> 
+setTimeout(function(){ window.location.href = "#contact"}, 1000);
+</script>
+
+<body scroll="no" style="overflow: hidden">
+  <div class="header">
+    <div class="navigation">
+        <ul>
+            <li><a id="home-link" href="#home">HOME</a></li>
+            <li><a id="about-link" href="#about">ABOUT</a></li>
+            <li><a id="myWork-link" href="#myWork">MY WORK</a></li>
+            <li><a id="contact-link" href="#contact">CONTACT</a></li>
+  
+        </ul>
+    </div>
+  </div>
+
+
+    <div id="home" class="main">
+        <div class="content">
+        <img class="potato-icon" src="files/potato.svg">
+        <h1>Welcome to<br> Starchcode</h1>
+        <h2>My name is Dave. I'm a front-end web developer!</h2>
+
+        </div>
+    </div>
+
+
+    <!--ABOUT section-->
+    <div id="about" class="main about"><!-- 1 -->
+
+
+        <div id = "about-content" class="content"><!-- 2 -->
+          
+          <div class="about-texts"> <!-- 3 -->
+         <h3>i have passion for making interactive websites</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Pellentesque quis ultricies leo. unt, tue. 
+            Nuelementum arcu. Morbi et nisl a ultricies 
+            justo, eget placerat tortor viverra sit amet. 
+            Phasellus at turpis vitae est viverra ullamcorper a 
+            vits a, lacinia nisl. Vestibulum a euismod velit. Aenean 
+            id gravida dui. Phasellus blandit eget est nec consectetur. 
+            Fusce malesuada felis sit amet pharetra egestas. Vivamus maximus 
+            magna a erat malesuada, a tristique felis porttitor. 
+            Suspendisse condimentum bibendum nulla, cursus tempus 
+            augue interdum eu. Curabitur eget hendrerit tortor.</p>
+          </div>
+
+          <div class="about-vsCode"> <!-- 4 -->
+            <div class= "about-vsCode-tab"> <!-- 5 -->
+                <p>&#60&#62 index.html</p>
+            </div>
+
+            <div class= "about-vsCode-snippet"> <!-- 6 -->
+             <p> <span class="cdNum">1</span> <span class="cdTag">&lt;style&gt;</span> <span class="cdFunc">.starchcode</span> { <br>
+              <span class="cdNum">2</span> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <span class="cdProp"> font-family:</span> <span class="cdQuo">&lsquo;potato&rsquo;;</span><br>
+              <span class="cdNum">3</span> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <span class="cdProp"> color:</span><span class="cdQuo"> &lsquo;Yukon Gold&rsquo;;</span><br>
+              <span class="cdNum">4</span> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <span class="cdProp"> font-size:</span> 2kg(boiled); <br>
+              <span class="cdNum">5</span> } <span class="cdTag">&lt;/style&gt;</span><br>
+              <span class="cdNum">6</span><span class="cdTag"> &lt;script&gt;</span> <span class="cdFunc"> function boilOrAirFry(potatoes)</span> { <br>
+              <span class="cdNum">7</span> if(!craveBoil){airFry(potatoes)} else &nbsp&nbsp{boil(potatoes)};<span class="cdTag"> &lt;/script&gt;</span>
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+    </div>
+
+  
+    <!--MY WORK section-->
+
+    <div id="myWork" class="main myWork">
+      <div class="content myWorkContent">
+        <div class="workLeft">
+          <div><h3>future work will be placed here!</h3></div> 
+        </div>
+        <div class="workRight">
+          <div><h3>future work will be placed here!</h3></div>
+          <div><h3>future work will be placed here!</h3></div>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="contact" class="main contact">
+      <div class="content potatoContent">
+        <h4>Drop me a line, I will contact you...</h4>
+          <form action="">
+              <label for="fname">First name:</label><br>
+              <input type="text" id="fname" name="fname"><br>
+              <label for="email">E-mail:</label><br>
+              <input type="text" id="email" name="email"><br>
+              <textarea id="message" rows = "5" col = "100" name = "message" placeholder="Write Something..."></textarea>
+              <input id="submit" type="submit" value="Send">
+          </form> 
+          <div class="potatoShape"></div>
+      </div>
+
+      <div class="footer">
+        <p id="copied" style="display: none; position: absolute; top: 0; color:rgb(38, 235, 38)">email copied !</p>
+        <p>I am ready for challenges!</p>
+        <p id="emailAdd" style="font-style: italic;" class="emailAdd">dave@starchcode.ie</p>
+      </div>
+    </div>
+
+</body>
+<script src="script.js"></script>
+
+</html>
+
+
+<!-- Icons made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>  -->

@@ -1,0 +1,346 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /*fonts I have: 200, 400, 700, 800, 900 */
+    font-family: 'Catamaran', sans-serif;
+    color: #744529;
+    text-align:center;
+    text-decoration: none;
+}
+
+
+.potato-icon {
+    height: 200px;
+}
+h1 {
+    font-weight: 900;
+    font-size: 80px;
+    line-height: 65px;
+    text-shadow: 3px 3px 1px #00000044
+}
+h2 {
+    font-size: 35px;
+}
+
+body{
+    background-color: #444343;
+}
+/*seting height for every page*/
+
+.main{
+    display: grid;
+    grid-template-columns: auto 700px auto;
+    grid-template-rows: 100vh;
+    place-items: center;
+    position: relative; /*without this footer will stick to #home*/
+    overflow: hidden;
+}
+
+#home, #myWork{
+    background-color: #F6ECBB;
+}
+
+.contact{
+
+}
+
+.content{/*2*/
+    /*border: 2px gray solid;*/
+    /*display: none;*/
+    grid-column: 2;
+}
+
+
+/*HOME*/
+
+.header {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+.navigation {
+    float: right;
+    background-color: #E0BD4D;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+ul {
+    display: flex;
+    list-style: none;
+    font-weight: 400;
+}
+ul li{
+    margin: 10px 32px;
+}
+li a:before{
+    content: "";
+    display:inline-block;
+    height:15px;
+    width:15px;
+    position: relative;
+    background-size: 15px 15px;
+    right: 3px;
+}
+li #home-link:before {
+    background-image: url(files/icons-menu/home.svg);
+    background-repeat: no-repeat;
+
+}
+li #about-link:before {
+    background-image: url(files/icons-menu/about.svg);
+    background-repeat: no-repeat;
+}
+li #myWork-link:before {
+    background-image: url(files/icons-menu/mywork.svg);
+    background-repeat: no-repeat;
+    top: 2px;
+}
+li #contact-link:before {
+    background-image: url(files/icons-menu/contact.svg);
+    background-repeat: no-repeat;
+    top: 2px;
+}
+/* -------- end of HOME*/
+
+
+
+
+
+/*about*/
+ #about { /*1*/
+    background-color: #744529; /*overwrite background color*/
+}
+.about h3{
+    color: white;
+    font-size: 38px;
+    font-weight: 900;
+    text-transform: capitalize;
+    line-height: 37px;
+    letter-spacing: -1px;
+    text-shadow: 3px 3px 1px #00000044;
+}
+.about p{
+    color: white;
+    font-weight: 200;
+}
+
+
+.about-vsCode { /*4*/
+    height: 252px;
+    border: 0.7px black solid;
+    background-color: #272A37;
+    position: relative;
+}
+.about-vsCode-tab { /*5*/
+    height: 23px;
+    width: 128px;
+    position: relative;
+    background-color: #272A37;
+    bottom: 23px;
+    right: 2px;
+    border-radius: 5px 5px 0 0;
+    border: 1px solid #707070;
+    border-bottom-color: transparent;
+}
+.about-vsCode-tab p {
+    color: #a09a9a;
+    font-size: 13px;
+    font-family: Courier, monospace;
+    position: relative;
+    top: 2px;
+}
+/*code style inside*/
+.about-vsCode-snippet p{
+    font-family: Courier, monospace;
+    font-size: 20px;
+    text-align: left;
+    padding: 6px;
+    line-height: 28px;
+    position: relative;
+    bottom: 15px;
+}
+.about-vsCode-snippet span{
+    font-family: Courier, monospace;
+    font-size: 20px;
+}
+.cdNum {
+    color: #5D72A8;    
+}
+.cdTag{
+    color: #FB69BF; 
+}
+.cdFunc{
+    color: #31FF69; 
+}
+.cdProp {
+    color: #5CE9FC;
+}
+.cdQuo {
+    color: #EEFB7A;
+}
+/* -------- end of ABOUT*/
+
+/* my work => make it flex box */
+
+.myWorkContent{
+    display: flex;
+    /*background-color: rgb(54, 43, 43);*/
+    height: 600px;
+    width: 100%;
+}
+
+.myWorkContent h3{
+    color: white;
+    font-style: italic;
+}
+
+.workLeft, .workRight{
+    display: inline-flex; 
+   /* background-color: rgb(6, 155, 6);*/
+    margin: 10px;
+}
+.workLeft {
+    flex: 1 1 180px;
+    /*background-color: cornflowerblue;*/
+}
+.workRight{
+    flex: 2 2 180px;
+    /*background-color: darkgreen;*/
+    flex-direction: column;
+
+}
+
+.workLeft div{
+    background-color: rgb(149, 149, 151);
+    width: 100%;
+}
+
+.workRight div:nth-child(1){
+    background-color: rgb(149, 149, 151);
+    flex: 1 0 30%;
+    width: 100%;
+    margin-bottom: 20px;
+
+}
+.workRight div:nth-child(2){
+    background-color: rgb(149, 149, 151);
+    flex: 2 0 30%;
+    width: 100%;
+
+}
+/* -- end of MY WORK -- */
+/*contact*/
+.potatoContent{
+    position: relative;
+}
+
+.potatoShape{
+    height: 370px;
+    width: 689px;
+    border-radius: 80% 89% 100% 68% / 90% 100% 71% 84%  ;
+    background-color: gray;
+    margin: 10px;
+    position: relative;
+    bottom: 80px;
+    left: 35px;
+    z-index: 0;
+}
+.contact h4{
+    position: relative;
+    z-index: 1;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 200;
+    color: white;
+    text-align: center;
+    letter-spacing: 2px;
+}
+form {
+    position: absolute;
+    margin-left: 210px;
+    text-align: left;
+    z-index: 1;
+}
+.contact label{
+    text-align: left;
+    color: white;
+}
+.contact input{
+    width: 100%;
+    text-align: left;
+    outline: none;
+
+}
+#message {
+    color: white;
+    height: 130px;
+    width: 370px;
+    text-align: left;
+    padding: 8px;
+    margin-top: 3px;
+    background-color: inherit;
+    resize: none;
+    border: 1px solid lightgray;
+    overflow: auto;
+    outline: none; /*removes the outline(when you select it it won't show
+    the blue stupid effect*/
+}
+::placeholder{
+    color: whitesmoke;
+
+}
+#submit{
+    width: 100px;
+    height: 30px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    background-color: white;
+    color: black;
+    font-style: 900;
+}
+
+/* -------- end of CONTACT*/
+
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    width: 100%;
+    background-color: #744529;
+    position: absolute;
+    bottom: 0;
+    z-index: 4;
+}
+
+.footer p{
+    color: #F6ECBB;
+}
+.emailAdd::after {
+    content: ".";
+    display: block;
+    position: relative;
+    background-image: url(files/icons-menu/twitter.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 25px 25px;
+}
+
+
+
+  /*source for shapes: 
+  https://9elements.github.io/fancy-border-radius/full-control.html#45.35.10.44-73.56.47.80-.
+  */
+
+  /*css flexbox good article:
+  https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+  */
+ /* syntax highlighting */
+
+
+/* important shotcuts cmd + opt + [ or ] fold sth
+cmd + k => 0 / cmd + K + j  //fold unfold all*/
