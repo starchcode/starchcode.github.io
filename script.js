@@ -1,5 +1,35 @@
+const homeLink = document.getElementById("home-link");
+const aboutLink = document.getElementById("about-link");
+const workLink = document.getElementById("myWork-link");
+const contactLink = document.getElementById("contact-link");
+const underNav = document.getElementById("underNav");
 
 
+//Navigation: animation settings
+const navAnimDur = 0.25
+const navAnim = navAnimDur.toString() + 's ease-out 0s 1 normal forwards running ';
+homeLink.onclick = function() {
+  underNav.style.animation = navAnim + ' underHome'
+  setTimeout(function(){underNav.style.left = '0%'}, navAnimDur * 1000);
+
+}
+aboutLink.onclick = function() {
+  /* @keyframes duration | timing-function | delay | 
+iteration-count | direction | fill-mode | play-state | name */
+  underNav.style.animation = navAnim +' underAbout'
+  setTimeout(function(){underNav.style.left = '23%'}, navAnimDur * 1000)
+}
+workLink.onclick = function() {
+  underNav.style.animation = navAnim + ' underWork';
+  setTimeout(function(){underNav.style.left = '47%'}, navAnimDur * 1000);
+}
+contactLink.onclick = function() {
+  underNav.style.animation = navAnim + ' underContact'
+  setTimeout(function(){underNav.style.left = '75%'}, navAnimDur * 1000)
+}
+
+
+//email copy func.
 const emailAdd = document.getElementById('emailAdd');
 function myFunc() {
     // source: https://hackernoon.com/copying-text-to-clipboard-with-javascript-df4d4988697f

@@ -59,7 +59,40 @@ body{
     width: 100%;
     z-index: 10;
 }
+.underNav {
+    position: absolute;
+    height: 100%;
+    width: 25%;
+    background-color: rgb(231, 231, 231);
+    left: 0;
+    opacity: .25;
+
+}
+@keyframes underHome {
+    100%{
+        left: 0%
+    }
+}
+@keyframes underAbout {
+    100%{
+        left: 23%
+    }
+}
+@keyframes underWork {
+    100%{
+        left: 47%
+    }
+}
+@keyframes underContact {
+    100%{
+        left: 75%
+    }
+}
+#home-link{
+
+}
 .navigation {
+    position: relative;
     float: right;
     background-color: #E0BD4D;
     margin-top: 10px;
@@ -67,6 +100,7 @@ body{
 }
 ul {
     display: flex;
+    position: relative; /* if I dont position this .underNav will go on the nav buttons*/
     list-style: none;
     font-weight: 400;
 }
@@ -85,7 +119,6 @@ li a:before{
 li #home-link:before {
     background-image: url(files/icons-menu/home.svg);
     background-repeat: no-repeat;
-
 }
 li #about-link:before {
     background-image: url(files/icons-menu/about.svg);
