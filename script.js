@@ -11,7 +11,6 @@ const navAnim = navAnimDur.toString() + 's ease-out 0s 1 normal forwards running
 homeLink.onclick = function() {
   underNav.style.animation = navAnim + ' underHome'
   setTimeout(function(){underNav.style.left = '0%'}, navAnimDur * 1000);
-
 }
 aboutLink.onclick = function() {
   /* @keyframes duration | timing-function | delay | 
