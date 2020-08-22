@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>🥔starchcode</title>
+    <title>🥔starchCode</title>
     <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@200;400;700;800;900&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -46,10 +46,10 @@ setTimeout(function(){ window.location.href = "#contact"}, 1000);
     <div class="navigation">
       <div id="underNav" class="underNav"></div>
         <ul>
-            <li><a id="home-link" href="#home">HOME</a></li>
-            <li><a id="about-link" href="#about">ABOUT</a></li>
-            <li><a id="myWork-link" href="#myWork">MY WORK</a></li>
-            <li><a id="contact-link" href="#contact">CONTACT</a></li>
+            <li><a id="home-link" class="home-link" href="#home">HOME</a></li>
+            <li><a id="about-link" class="about-link"  href="#about">ABOUT</a></li>
+            <li><a id="myWork-link" class="myWork-link" href="#myWork">MY WORK</a></li>
+            <li><a id="contact-link" class="contact-link" href="#contact">CONTACT</a></li>
   
         </ul>
     </div>
@@ -59,10 +59,13 @@ setTimeout(function(){ window.location.href = "#contact"}, 1000);
     <div id="home" class="main">
         <div class="content">
         <img class="potato-icon" src="files/potato.svg">
-        <h1>Welcome to<br> Starchcode</h1>
-        <h2>My name is Dave. I'm a front-end web developer!</h2>
-
+        <h1>Welcome to<br>starchCode</h1>
+        <h2>My name is Davoud. I'm a front-end web developer based in Dublin, Ireland.</h2>
         </div>
+        <div class="overlayButtonBottom about-link">
+         <a style="color: gray; width: 100%; height: 100%; " href="#about"><br>ABOUT</a>
+        </div>
+      </a>
     </div>
 
 
@@ -73,18 +76,14 @@ setTimeout(function(){ window.location.href = "#contact"}, 1000);
         <div id = "about-content" class="content"><!-- 2 -->
           
           <div class="about-texts"> <!-- 3 -->
-         <h3>i have passion for making interactive websites</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-            Pellentesque quis ultricies leo. unt, tue. 
-            Nuelementum arcu. Morbi et nisl a ultricies 
-            justo, eget placerat tortor viverra sit amet. 
-            Phasellus at turpis vitae est viverra ullamcorper a 
-            vits a, lacinia nisl. Vestibulum a euismod velit. Aenean 
-            id gravida dui. Phasellus blandit eget est nec consectetur. 
-            Fusce malesuada felis sit amet pharetra egestas. Vivamus maximus 
-            magna a erat malesuada, a tristique felis porttitor. 
-            Suspendisse condimentum bibendum nulla, cursus tempus 
-            augue interdum eu. Curabitur eget hendrerit tortor.</p>
+         <h3>i have passion for making cool websites!</h3>
+          <p>Hi, My name is Davoud. I am a junior web-developer and designer. Just about a 
+            few months ago I decided to start a second job something that has to with computers, and that 
+            I possibly can do in my free time. Web seemed quite interesting. After just trying
+            to code for a while I fell in love with coding and decided to take it seriously!. Here I am and this is my very first website! 
+            <br>Since I am building a portfolio for myself I have very good deals. <a class="contact-link" style="color: rgba(250, 245, 181, 0.836); text-decoration: underline;" href="#contact">Please get in touch with me 
+            So I can tell you all about it!</a><br>&nbsp
+          </p>
           </div>
 
           <div class="about-vsCode"> <!-- 4 -->
@@ -106,6 +105,9 @@ setTimeout(function(){ window.location.href = "#contact"}, 1000);
 
         </div>
 
+        <div class="overlayButtonBottom myWork-link">
+          <a style="color: rgb(66, 65, 65); width: 100%; height: 100%; " href="#myWork"><br>MY WORK</a>
+         </div>
     </div>
 
   
@@ -122,9 +124,20 @@ setTimeout(function(){ window.location.href = "#contact"}, 1000);
         </div>
 
       </div>
+
+      <div class="overlayButtonBottom contact-link">
+        <a style="color: gray; width: 100%; height: 100%; " href="#contact"><br>Contact</a>
+       </div>
     </div>
 
     <div id="contact" class="main contact">
+      <div class="content potatoContent">
+        <p id="copied" style="display: none; position: absolute; bottom: -30%; margin-left: 38%; color:rgb(38, 235, 38)">email copied !</p>
+        <h3 style="font-size:30px;">I am ready for challenges! <br>Do not hesitate to contact me for your queries!</h3>
+        <p style="color: rgb(182, 181, 181);">Just click on my email to copy it!</p>
+        <h2 id="emailAdd" style="font-style: italic; margin-top: 12px;" class="emailAdd">dave [at] starchcode [dot] ie</h2>
+      </div>
+      <!--
       <div class="content potatoContent">
         <h4>Drop me a line, I will contact you...</h4>
           <form action="">
@@ -136,12 +149,27 @@ setTimeout(function(){ window.location.href = "#contact"}, 1000);
               <input id="submit" type="submit" value="Send">
           </form> 
           <div class="potatoShape"></div>
-      </div>
+      </div> -->
 
       <div class="footer">
-        <p id="copied" style="display: none; position: absolute; top: 0; color:rgb(38, 235, 38)">email copied !</p>
-        <p>I am ready for challenges!</p>
-        <p id="emailAdd" style="font-style: italic;" class="emailAdd">dave@starchcode.ie</p>
+         <div class="menuFooter">
+          <a class="home-link" href="#home">HOME</a>
+          <a class="about-link" href="#about">ABOUT</a>
+          <a class="myWork-link" href="#myWork">MY WORK</a>
+          <a id="emailAdd2" class="contact-link" href="#contact">CONTACT</a>
+         </div>
+         <div class="connectFooter">
+           <a href="#">Twitter</a>
+           <a target="blank" href="https://github.com/starchcode">GitHub</a>
+           <a target="blank" href="https://www.codewars.com/users/starchcode">Codewars</a>
+           <a target="blank" href="https://www.codecademy.com/profiles/starchcode">CodeCademy</a>
+         </div>
+         <div class="quoteFooter">
+            <a class="footerCollins" 
+             target="blank" href="https://en.wikipedia.org/wiki/Michael_Collins_(Irish_leader)">
+           <p>“Give us the future..we’ve had enough of your past..<br>give us back our country to live in—to grow in..to love.”
+             <br><em style="color: inherit;">—Michael Collins</em></p></a>
+         </div>
       </div>
     </div>
 

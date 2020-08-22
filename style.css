@@ -18,19 +18,26 @@ h1 {
     font-weight: 900; 
     font-size: 80px;
     line-height: 65px;
+    margin-bottom: 30px;
     text-shadow: 3px 3px 1px #00000044; 
-    animation-name: homeHeadAnim;
-    animation-duration: .5s;
-    animation-delay: .5s;
-    animation-timing-function: ease-in-out;
-
+    opacity: 0;
+      /* @keyframes duration | timing-function | delay | 
+iteration-count | direction | fill-mode | play-state | name */
+    animation: .5s ease-in-out .5s 1 forwards normal homeHeadAnim
 }
 @keyframes homeHeadAnim {
+
+    40%{
+        opacity: 1;
+    }
     50% {
         transform: skewX(-8deg);
     }
     75%{
         transform: skewX(12deg);
+    }
+    100%{
+        opacity: 1;
     }
 }
 
@@ -38,6 +45,7 @@ h2 {
     font-size: 35px;
     animation-name: homeH2Anim; 
     position: relative;
+    line-height: 100%;
     opacity: 0;
     animation-delay: .7s;
     animation-duration: 0.5s;
@@ -72,18 +80,32 @@ body{
     background-color: #F6ECBB;
 }
 
-.contact{
-
-}
-
 .content{/*2*/
     /*border: 2px gray solid;*/
     /*display: none;*/
     grid-column: 2;
+    margin-bottom: 0%;
 }
 
 
 /*HOME*/
+.overlayButtonBottom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: gray;
+    position: absolute;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(255,199,0,0) 0%, rgba(208,208,212,.7) 100%);
+    height: 120px;
+    bottom: 0;
+    opacity: 0.4;
+    transition: opacity .3s ease-out;
+}
+.overlayButtonBottom:hover{
+    opacity: .8;
+}
 
 .header {
     position: fixed;
@@ -184,7 +206,8 @@ li #contact-link:before {
 }
 .about p{
     color: white;
-    font-weight: 200;
+    font-weight: 400;
+    font-size: 1.15em;
 }
 
 
@@ -253,8 +276,10 @@ li #contact-link:before {
 }
 
 .myWorkContent h3{
-    color: white;
+    color: rgb(88, 86, 86);
     font-style: italic;
+    font-weight: 200;
+    font-size: 18px;
 }
 
 .workLeft, .workRight{
@@ -274,22 +299,22 @@ li #contact-link:before {
 }
 
 .workLeft div{
-    background-color: rgb(149, 149, 151);
+    background-color: rgba(149, 149, 151, 0.2);
     width: 100%;
 }
 
 .workRight div:nth-child(1){
-    background-color: rgb(149, 149, 151);
+    background-color: rgba(149, 149, 151, 0.2);
     flex: 1 0 30%;
     width: 100%;
     margin-bottom: 20px;
 
 }
 .workRight div:nth-child(2){
-    background-color: rgb(149, 149, 151);
+    background-color: rgba(149, 149, 151, 0.2);
     flex: 2 0 30%;
     width: 100%;
-
+    
 }
 /* -- end of MY WORK -- */
 /*contact*/
@@ -302,6 +327,7 @@ li #contact-link:before {
     width: 689px;
     border-radius: 80% 89% 100% 68% / 90% 100% 71% 84%  ;
     background-color: gray;
+    opacity: 0.2;
     margin: 10px;
     position: relative;
     bottom: 80px;
@@ -362,13 +388,19 @@ form {
     color: black;
     font-style: 900;
 }
-
+/*new contact page*/
+.potatoContent h2 {
+    color: white;
+}
+.potatoContent h3{
+    color: white;
+}
 /* -------- end of CONTACT*/
 
 
 .footer {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     height: 120px;
@@ -378,19 +410,30 @@ form {
     bottom: 0;
     z-index: 4;
 }
+.footer a{
 
-.footer p{
-    color: #F6ECBB;
-}
-.emailAdd::after {
-    content: ".";
+    color: rgb(214, 212, 212);
     display: block;
-    position: relative;
-    background-image: url(files/icons-menu/twitter.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 25px 25px;
+    font-size: 12px;
+    margin: 5px;
 }
+.footer a:hover{
+    color:white;
+}
+.footer p:hover{
+    color:white;
+}
+.footer p{
+
+    color: #F6ECBB;
+    font-size: 15px;
+}
+.footer div{
+    /* margin: 0 auto; */
+    margin-right: 10%;
+    margin-left: 2%;
+}
+
 
 
 

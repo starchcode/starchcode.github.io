@@ -1,39 +1,56 @@
-const homeLink = document.getElementById("home-link");
-const aboutLink = document.getElementById("about-link");
-const workLink = document.getElementById("myWork-link");
-const contactLink = document.getElementById("contact-link");
+// const homeLink = document.getElementsByClassName("home-link");
+const homeLink = document.getElementsByClassName("home-link")
+const aboutLink = document.getElementsByClassName("about-link");
+const workLink = document.getElementsByClassName("myWork-link");
+const contactLink = document.getElementsByClassName("contact-link");
 const underNav = document.getElementById("underNav");
 
 
 //Navigation: animation settings
 const navAnimDur = 0.25
 const navAnim = navAnimDur.toString() + 's ease-out 0s 1 normal forwards running ';
-homeLink.onclick = function() {
+function homeBg(){
   underNav.style.animation = navAnim + ' underHome'
   setTimeout(function(){underNav.style.left = '0%'}, navAnimDur * 1000);
 }
-aboutLink.onclick = function() {
+function aboutBg(){
   /* @keyframes duration | timing-function | delay | 
 iteration-count | direction | fill-mode | play-state | name */
   underNav.style.animation = navAnim +' underAbout'
   setTimeout(function(){underNav.style.left = '23%'}, navAnimDur * 1000)
 }
-workLink.onclick = function() {
+function workBg() {
   underNav.style.animation = navAnim + ' underWork';
   setTimeout(function(){underNav.style.left = '47%'}, navAnimDur * 1000);
 }
-contactLink.onclick = function() {
+function contactBg() {
   underNav.style.animation = navAnim + ' underContact'
   setTimeout(function(){underNav.style.left = '75%'}, navAnimDur * 1000)
 }
+homeLink[0].onclick = homeBg;
+homeLink[1].onclick = homeBg;
+aboutLink[0].onclick = aboutBg;
+aboutLink[1].onclick = aboutBg;
+aboutLink[2].onclick = aboutBg;
+contactLink[0].onclick = contactBg;
+contactLink[1].onclick = contactBg;
+contactLink[2].onclick = contactBg;
+contactLink[3].onclick = contactBg;
+
+workLink[0].onclick = workBg; 
+workLink[1].onclick = workBg; 
+workLink[2].onclick = workBg; 
+
+
 
 
 //email copy func.
 const emailAdd = document.getElementById('emailAdd');
+const emailAdd2 = document.getElementById('emailAdd2');
 function myFunc() {
     // source: https://hackernoon.com/copying-text-to-clipboard-with-javascript-df4d4988697f
     const el = document.createElement('textarea');  // Create a <textarea> element
-    el.value = emailAdd.innerHTML;                  // Set its value to the string that you want copied
+    el.value = "dave@starchcode.ie";                  // Set its value to the string that you want copied
     el.setAttribute('readonly', '');                // Make it readonly to be tamper-proof
     el.style.position = 'absolute';                 
     el.style.left = '-9999px';                      // Move outside the screen to make it invisible
@@ -55,6 +72,8 @@ function myFunc() {
 };
 
 emailAdd.onmousedown = myFunc;
+emailAdd2.onmousedown = myFunc;
+
 
 
 
