@@ -212,6 +212,7 @@ li #contact-link:before {
 
 
 .about-vsCode { /*4*/
+
     height: 252px;
     border: 0.7px black solid;
     background-color: #272A37;
@@ -317,6 +318,8 @@ li #contact-link:before {
     
 }
 /* -- end of MY WORK -- */
+
+
 /*contact*/
 .potatoContent{
     position: relative;
@@ -376,7 +379,6 @@ form {
 }
 ::placeholder{
     color: whitesmoke;
-
 }
 #submit{
     width: 100px;
@@ -436,6 +438,84 @@ form {
 
 
 
+/* media queries */
+@media only screen 
+  and (min-width: 375px) 
+  and (max-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+      /*seting height for every page*/
+ul {
+        justify-content: center;
+    }
+.main{
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: 15vh 85vh;
+    place-items: center;
+}
+.content{/*2*/
+    /*border: 2px gray solid;*/
+    /*display: none;*/
+    grid-column: 1;
+    grid-row: 2;
+    /* margin-bottom: 0%; */
+}
+.potatoContent{
+    position: relative;
+    margin-bottom: auto;
+}
+
+#home, #myWork{
+    background-color: #F6ECBB;
+}
+.overlayButtonBottom{
+    display: none;
+}
+
+.header {
+    position: fixed;
+    width: 100vw;
+    z-index: 10;
+}
+.underNav {
+    display: none;
+}
+
+.navigation {
+    position: relative;
+    float: none;
+
+    margin-top: 0;
+    margin-right: 0;
+}
+li a:before{
+    display:none;;
+}
+h1{
+    font-size: 40px;
+    line-height: 30px;
+}
+h2{
+    font-size: 22px;
+}
+.about-vsCode { /*4*/
+    display: none;
+}
+
+.myWorkContent{
+    display: flex;
+    /*background-color: rgb(54, 43, 43);*/
+    height: 85vh;
+    width: 100%;
+}
+.potatoContent h3 {
+    font-size: 20px;
+}
+.quoteFooter{
+    display: none;
+}
+}
+
 
   /*source for shapes: 
   https://9elements.github.io/fancy-border-radius/full-control.html#45.35.10.44-73.56.47.80-.
@@ -445,7 +525,8 @@ form {
   https://css-tricks.com/snippets/css/a-guide-to-flexbox/
   */
  /* syntax highlighting */
-
+ /* media queries
+  https://css-tricks.com/snippets/css/media-queries-for-standard-devices/ */
 
 /* important shotcuts cmd + opt + [ or ] fold sth
 cmd + k => 0 / cmd + K + j  //fold unfold all*/

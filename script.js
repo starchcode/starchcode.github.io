@@ -66,8 +66,8 @@ function myFunc() {
       document.getSelection().removeAllRanges();    // Unselect everything on the HTML document
       document.getSelection().addRange(selected);   // Restore the original selection
     }*/
-    document.getElementById('copied').style.display = "block";
-    setTimeout(() => { document.getElementById('copied').style.display = "none";
+    document.getElementById('copied').style.visibility = "visible";
+    setTimeout(() => { document.getElementById('copied').style.visibility = "hidden";
   }, 3000);
 };
 
