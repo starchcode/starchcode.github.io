@@ -84,7 +84,8 @@ body{
     /*border: 2px gray solid;*/
     /*display: none;*/
     grid-column: 2;
-    margin-bottom: 0%;
+    align-self: center;
+    padding-top: 45px;
 }
 
 
@@ -444,9 +445,13 @@ form {
   and (max-width: 667px) 
   and (-webkit-min-device-pixel-ratio: 2) { 
       /*seting height for every page*/
-ul {
-        justify-content: center;
+      .potato-icon {
+        height: 150px;
     }
+ul {
+    justify-content: center;
+    font-size: 12px;
+}
 .main{
     display: grid;
     grid-template-columns: 100vw;
@@ -458,11 +463,19 @@ ul {
     /*display: none;*/
     grid-column: 1;
     grid-row: 2;
+    padding: 0 50px;
     /* margin-bottom: 0%; */
+}
+.about h3{
+    font-size: 22px;
+}
+.about p{
+    font-weight: 200;
+    font-size: 1em;
 }
 .potatoContent{
     position: relative;
-    margin-bottom: auto;
+    margin-bottom: 20%;
 }
 
 #home, #myWork{
@@ -484,7 +497,7 @@ ul {
 .navigation {
     position: relative;
     float: none;
-
+    padding: 0 30px;
     margin-top: 0;
     margin-right: 0;
 }
