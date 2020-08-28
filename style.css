@@ -41,8 +41,8 @@ iteration-count | direction | fill-mode | play-state | name */
     }
 }
 
-h2 {
-    font-size: 35px;
+#home h2 {
+    font-size: 35px; 
     animation-name: homeH2Anim; 
     position: relative;
     line-height: 100%;
@@ -87,26 +87,17 @@ body{
     align-self: center;
     padding-top: 45px;
 }
-
+#ver{
+    position: absolute;
+    align-self: center;
+    color: gray;
+    font-style: italic;
+    font-size: 0.7em;
+    right: 2%;
+    bottom: 0;
+}
 
 /*HOME*/
-.overlayButtonBottom{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
-    color: gray;
-    position: absolute;
-    width: 100%;
-    background: linear-gradient(180deg, rgba(255,199,0,0) 0%, rgba(208,208,212,.7) 100%);
-    height: 120px;
-    bottom: 0;
-    opacity: 0.4;
-    transition: opacity .3s ease-out;
-}
-.overlayButtonBottom:hover{
-    opacity: .8;
-}
 
 .header {
     position: fixed;
@@ -120,26 +111,7 @@ body{
     background-color: rgb(231, 231, 231);
     left: 0;
     opacity: .25;
-}
-@keyframes underHome {
-    100%{
-        left: 0%
-    }
-}
-@keyframes underAbout {
-    100%{
-        left: 23%
-    }
-}
-@keyframes underWork {
-    100%{
-        left: 47%
-    }
-}
-@keyframes underContact {
-    100%{
-        left: 75%
-    }
+    transition: left .3s ease-out;
 }
 
 .navigation {
@@ -204,21 +176,26 @@ li #contact-link:before {
     line-height: 37px;
     letter-spacing: -1px;
     text-shadow: 3px 3px 1px #00000044;
+    transition: font-size 1s;
 }
 .about p{
     color: white;
     font-weight: 400;
     font-size: 1.15em;
+    transition: color 1s;
 }
 
 
 .about-vsCode { /*4*/
-
     height: 252px;
     border: 0.7px black solid;
     background-color: #272A37;
     position: relative;
+    transform: translateX(0);
+    opacity: 1;
+    transition: all 1s ease;
 }
+
 .about-vsCode-tab { /*5*/
     height: 23px;
     width: 128px;
@@ -275,7 +252,7 @@ li #contact-link:before {
     /*background-color: rgb(54, 43, 43);*/
     height: 600px;
     width: 100%;
-}
+} 
 
 .myWorkContent h3{
     color: rgb(88, 86, 86);
@@ -390,13 +367,18 @@ form {
     background-color: white;
     color: black;
     font-style: 900;
-}
+} 
 /*new contact page*/
 .potatoContent h2 {
     color: white;
 }
 .potatoContent h3{
     color: white;
+}
+.emailAdd{
+    transform: translateX(0);
+    opacity: 1;
+    transition: all .5s ease;
 }
 /* -------- end of CONTACT*/
 
@@ -437,9 +419,12 @@ form {
     margin-left: 2%;
 }
 
+.leftAnim {
+    opacity: 0;
+    transform: translateX(-200px);
+}
 
-
-/* media queries */
+/* media queries ---------------------------- */
 @media only screen 
   and (min-width: 375px) 
   and (max-width: 667px) 
@@ -481,17 +466,12 @@ ul {
 #home, #myWork{
     background-color: #F6ECBB;
 }
-.overlayButtonBottom{
-    display: none;
-}
+
 
 .header {
     position: fixed;
     width: 100vw;
     z-index: 10;
-}
-.underNav {
-    display: none;
 }
 
 .navigation {
