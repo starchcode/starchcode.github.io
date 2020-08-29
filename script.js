@@ -1,6 +1,6 @@
 const underNav = document.getElementById('underNav')
 const pages = document.querySelectorAll('.main');
-const underNavPos = ['0', '23%', '47%', '75%'];
+const underNavPos = ['0', '21.5%', '47%', '75%'];
 
 //Navigation: animation settings
 const navAnimDur = 0.25
@@ -50,7 +50,7 @@ const emailAdd2 = document.getElementById('emailAdd2');
 function emailCopier() {
     // source: https://hackernoon.com/copying-text-to-clipboard-with-javascript-df4d4988697f
     const el = document.createElement('textarea');  // Create a <textarea> element
-    el.value = "Davoud.starchCode@gmail.com";                  // Set its value to the string that you want copied
+    el.value = "starchCode@gmail.com";                  // Set its value to the string that you want copied
     el.setAttribute('readonly', '');                // Make it readonly to be tamper-proof
     el.style.position = 'absolute';                 
     el.style.left = '-9999px';                      // Move outside the screen to make it invisible
