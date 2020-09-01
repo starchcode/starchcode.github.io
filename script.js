@@ -1,6 +1,6 @@
 const underNav = document.getElementById('underNav')
 const pages = document.querySelectorAll('.main');
-const underNavPos = ['0', '21.5%', '47%', '75%'];
+const underNavPos = ['0', '25%', '50%', '75%'];
 
 //Navigation: animation settings
 const navAnimDur = 0.25

@@ -127,9 +127,36 @@ ul {
     position: relative; /* if I dont position this .underNav will go on the nav buttons*/
     list-style: none;
     font-weight: 400;
+    width: 500px;
+
 }
 ul li{
-    margin: 10px 32px;
+    margin: 6px 0;
+    width: 25%;
+    
+}
+
+li a span{
+    position: absolute;
+    background-color: #0000006c;
+    width: 25%;
+    height: 2%;
+    left: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s;
+}
+li a:hover span {
+    transform: scaleX(1);
+}
+li:nth-child(2) a span{
+    left: 25%;
+}
+li:nth-child(3) a span{
+    left: 50%;
+}
+li:nth-child(4) a span{
+    left: 75%;
 }
 li a:before{
     content: "";
@@ -139,6 +166,12 @@ li a:before{
     position: relative;
     background-size: 15px 15px;
     right: 3px;
+}
+li a{
+    transition: color 0.3s;
+}
+li a:hover{
+    color: rgb(236, 231, 231);
 }
 li #home-link:before {
     background-image: url(files/icons-menu/home.svg);
@@ -431,11 +464,15 @@ form {
   and (-webkit-min-device-pixel-ratio: 2) { 
       /*seting height for every page*/
       .potato-icon {
-        height: 150px;
+        height: 120px;
     }
 ul {
     justify-content: center;
     font-size: 12px;
+    width: 100vw;
+}
+li a span{
+    display: none;
 }
 .main{
     display: grid;
@@ -469,20 +506,16 @@ ul {
 
 
 .header {
-    position: fixed;
-    width: 100vw;
-    z-index: 10;
+
 }
 
 .navigation {
     position: relative;
-    float: none;
-    padding: 0 30px;
-    margin-top: 0;
-    margin-right: 0;
+    margin: 0;
+
 }
 li a:before{
-    display:none;;
+    display:none;
 }
 h1{
     font-size: 40px;
@@ -490,6 +523,9 @@ h1{
 }
 h2{
     font-size: 22px;
+}
+#home h2{
+    font-size: 20px
 }
 .about-vsCode { /*4*/
     display: none;
