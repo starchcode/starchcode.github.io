@@ -10,6 +10,7 @@
 }
 
 
+
 .potato-icon {
     height: 200px;
 }
@@ -146,9 +147,10 @@ li a span{
     transform: scaleX(0);
     transition: transform 0.3s;
 }
+@media (hover: hover) {
 li a:hover span {
     transform: scaleX(1);
-}
+}}
 li:nth-child(2) a span{
     left: 25%;
 }
@@ -170,8 +172,10 @@ li a:before{
 li a{
     transition: color 0.3s;
 }
+@media (hover: hover) {
 li a:hover{
     color: rgb(236, 231, 231);
+}
 }
 li #home-link:before {
     background-image: url(files/icons-menu/home.svg);
@@ -435,12 +439,13 @@ form {
     font-size: 12px;
     margin: 5px;
 }
+@media (hover: hover) {
 .footer a:hover{
     color:white;
 }
 .footer p:hover{
     color:white;
-}
+}}
 .footer p{
 
     color: #F6ECBB;
@@ -456,6 +461,7 @@ form {
     opacity: 0;
     transform: translateX(-200px);
 }
+
 
 /* media queries ---------------------------- */
 @media only screen 
