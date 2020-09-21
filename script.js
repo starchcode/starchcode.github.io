@@ -1,6 +1,9 @@
 const underNav = document.getElementById('underNav')
 const pages = document.querySelectorAll('.main');
+const menuButtons = document.querySelectorAll('.menuBut');
 const underNavPos = ['0', '25%', '50%', '75%'];
+
+
 
 //Navigation: animation settings
 const navAnimDur = 0.25
@@ -26,6 +29,11 @@ function scanDocument() {
   pages.forEach(function(page, index) {
      if (isVisible(page)){
         underNav.style.left = underNavPos[index];
+
+        for(i = 0; i<menuButtons.length; i++){
+          i == index? menuButtons[index].style.color = '#A04000': menuButtons[i].style.color = 'initial'
+        }
+        
      }
    });
    
