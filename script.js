@@ -103,9 +103,13 @@ let result = '';
 }
 function listGit(project){
   let result = '';
-    for(let i=0; i< project.github.length; i++){
-      result += `<a href='${project.github[i]}' target='_blank'>${project.github[i]}</a>`
-    }
+  if( project.github.length < 2 ) {
+    result += `<a href='${project.github[0]}' target='_blank'><img style="width: 80px" src='./files/gitlogo/gitbl.png'/></a>`
+    return result;
+  }
+      result += `<p >Front-End :</p> <a href='${project.github[0]}' target='_blank'><img style="width: 80px" src='./files/gitlogo/gitbl.png'/></a>`
+      result += `<p >Back-End :</p> <a href='${project.github[1]}' target='_blank'><img style="width: 80px" src='./files/gitlogo/gitbl.png'/></a>`
+
     return result
   }
 work.forEach((div) => {
@@ -120,7 +124,7 @@ work.forEach((div) => {
 <ul id='myWorkTech'>
 ${listTech(div)}
 </ul>
-<h4>code on github:</h4>
+<h4>Source code:</h4>
 <ul>
 ${listGit(div)}</ul>
 ${div.youtube? div.youtube: ''}
