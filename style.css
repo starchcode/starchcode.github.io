@@ -294,6 +294,7 @@ li #contact-link:before {
     width: 100%;
     max-width: 700px;
     margin: 0 auto;
+    margin-bottom: 70px;
 }
 .myWork h1{
     font-size: 3em;
@@ -301,15 +302,15 @@ li #contact-link:before {
     transition: all 0.2s;
 }
 .myWork h1:hover{
-    font-size: 3.2em;
     color: #a35f38;
-
-    margin-top: 30px;
-    margin-bottom: 0;
+    font-size: 3.2em;
+    /* margin-top: 30px;
+    margin-bottom: 0; */
 }
 
 .myWork h2{
     background-color: khaki;
+    margin: 60px 0;
 }
 .myWork p {
     margin: 0 15px;
@@ -317,6 +318,11 @@ li #contact-link:before {
 .imgCover {
     width: 100%;
     margin: 5px auto;
+    transition: all 0.2s;
+}
+.imgCover:hover{
+    filter: brightness(0.4);
+filter: contrast(110%);
 }
 .MyWorkContent ul{
     display: flex;
