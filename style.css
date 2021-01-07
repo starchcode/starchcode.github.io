@@ -204,6 +204,7 @@ li #contact-link:before {
 /*about*/
  #about { /*1*/
     background-color: #744529; /*overwrite background color*/
+    grid-template-rows: auto;
 }
 .about h3{
     color: white;
@@ -279,6 +280,22 @@ li #contact-link:before {
 }
 .cdQuo {
     color: #EEFB7A;
+}
+
+.skills {
+    flex-direction: column;
+    list-style-type: square;
+    margin: 0 auto;
+}
+.skills > li {
+    color: white;
+    width: 100%;
+}
+
+#about-content a img{
+    /* width: 50%; */
+    margin: 10px 0 23px 0;
+
 }
 /* -------- end of ABOUT*/
 
