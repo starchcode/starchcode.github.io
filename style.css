@@ -76,7 +76,9 @@ body{
     position: relative; /*without this footer will stick to #home*/
     overflow: hidden;
 }
-
+#home, #contact{
+    padding: 10vh 0;
+}
 #home, #myWork{
     background-color: #F6ECBB;
 }
@@ -205,6 +207,7 @@ li #contact-link:before {
  #about { /*1*/
     background-color: #744529; /*overwrite background color*/
     grid-template-rows: auto;
+    padding: 10vh 0;
 }
 .about h3{
     color: white;
@@ -221,6 +224,7 @@ li #contact-link:before {
     font-weight: 400;
     font-size: 1.15em;
     transition: color 1s;
+    padding: 0 20px;
 }
 
 
@@ -293,9 +297,7 @@ li #contact-link:before {
 }
 
 #about-content a img{
-    /* width: 50%; */
-    margin: 10px 0 23px 0;
-
+    margin-top: 10px;
 }
 /* -------- end of ABOUT*/
 
@@ -511,7 +513,7 @@ li a span{
 .main{
     display: grid;
     grid-template-columns: 100vw;
-    grid-template-rows: 15vh 85vh;
+    grid-template-rows: auto auto;
     place-items: center;
 }
 .content{/*2*/
