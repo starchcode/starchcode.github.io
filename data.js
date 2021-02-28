@@ -4,7 +4,7 @@ const work =[
         'img': './files/relationshipapp.png',
         'short-desc': 'An app that shows relationship between two people',
         'date': 'February 2021',
-        'description': 'The full-stack app shows can add people and relaitonship to a database. By choosing two people it will show the relationship between selected people. if they are not directly related it will show degrees of separation for example: if Dave and Ryan have a mutual friend named John. it will show Dave > John > Ryan',
+        'description': 'The full-stack app shows relationship between people and can add people and relaitonships to a database. By choosing two people it will show the relationship between selected people. if they are not directly related it will show degrees of separation for example: if Dave and Ryan have a mutual friend named John. it will show Dave > John > Ryan. It will also show more complicated relationships. If two people have a few people between them the app can show. Dave > John > Brad > Ryan.',
         'tech': [ 'JavaScript ReactJs',
             'NodeJs with ExpressJs for backend API',
             'SQLite'
