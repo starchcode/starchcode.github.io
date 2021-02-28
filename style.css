@@ -71,13 +71,17 @@ body{
 .main{
     display: grid;
     grid-template-columns: auto 700px auto;
-    grid-template-rows: 100vh;
+    grid-template-rows: 80vh;
     place-items: center;
     position: relative; /*without this footer will stick to #home*/
     overflow: hidden;
 }
 #home, #contact{
     padding: 10vh 0;
+}
+#contact{
+    grid-template-rows: 50vh;
+
 }
 #home, #myWork{
     background-color: #F6ECBB;

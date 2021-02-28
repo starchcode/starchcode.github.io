@@ -1,8 +1,21 @@
 const work =[
     {
+        'title': 'Relationship App (click to visit)',
+        'img': './files/relationshipapp.png',
+        'short-desc': 'An app that shows relationship between two people',
+        'date': 'February 2021',
+        'description': 'The full-stack app shows can add people and relaitonship to a database. By choosing two people it will show the relationship between selected people. if they are not directly related it will show degrees of separation for example: if Dave and Ryan have a mutual friend named John. it will show Dave > John > Ryan',
+        'tech': [ 'JavaScript ReactJs',
+            'NodeJs with ExpressJs for backend API',
+            'SQLite'
+        ],
+        'project-link': 'https://relationship-starchcode.netlify.app',
+        'github': ['https://github.com/starchcode/relationship_app'],
+    },
+    {
         'title': 'theGingerBlondieBakery.ie',
         'img': './files/gingerscrshot.png',
-        'short-desc': ' a website for a food brand based in Dublin, Ireland',
+        'short-desc': 'a website for a food brand based in Dublin, Ireland',
         'date': 'December 2020',
         'description': 'A project for a food brand. However I used ReactJs to build a dynamic website. Goals included contact from, newsletter, blog and products page. Here I had to create a backend app that can handle all the API calls safely without exposing sensitive data. Website is deployed on a VPS to challenge myself and learn new skills (LEMP stack). Here you can have a look at my codes on github',
         'tech': [ 'HTML & CSS',
