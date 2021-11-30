@@ -115,7 +115,7 @@ function listGit(project){
 work.forEach((div) => {
   $("#myWork").append(`
 <div class='MyWorkContent'>
-<a href='${div["project-link"]}' target='_blank' ><h1>${div.title}</h1>
+<a href='${div["project-link"]}' target='_blank' ><h2>${div.title}</h2>
 <div class='imgCover'><img width='100%' src=${div.img} /></div></a>
 <p>${div.date}</p>
 <h3>${div["short-desc"]}</h3>

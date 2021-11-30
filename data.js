@@ -1,6 +1,19 @@
 const work =[
     {
-        'title': 'Relationship App (click to visit)',
+        'title': 'Juanpamusic.com',
+        'img': './files/juanpamusic.png',
+        'short-desc': 'A musician portfolio app with ReactJs',
+        'date': 'November 2021',
+        'description': 'This is a full-stack web app built with ReactJs and Nodejs with Express framework. I used Google Sheets as database. Using Google Sheets brings a lot of convenience for the client as adding or removing data from the Sheets app on smartphone becomes easy while it is secure. I built this website from scratch including the design. The biggest challenge was creating a robust double language website. I used my own algorithm to achieve this! There are still a few features that I would like to add. You can see track of these features on the Github page (link below).',
+        'tech': [ 'JavaScript ReactJs',
+            'NodeJs with ExpressJs for backend API',
+            'Google Sheets (as database)'
+        ],
+        'project-link': 'https://juanpamusic.com',
+        'github': ['https://github.com/starchcode/juanpamusic'],
+    },
+    {
+        'title': 'Relationship App',
         'img': './files/relationshipapp.png',
         'short-desc': 'An app that shows relationship between two people',
         'date': 'February 2021',

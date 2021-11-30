@@ -1,633 +1,628 @@
-@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@200;400;700;800;900&display=swap');
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    /*fonts I have: 200, 400, 700, 800, 900 */
-    font-family: 'Catamaran', sans-serif;
-    color: #744529;
-    text-align:center;
-    text-decoration: none;
+@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@200;400;700;800;900&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /*fonts I have: 200, 400, 700, 800, 900 */
+  font-family: "Catamaran", sans-serif;
+  color: #744529;
+  text-align: center;
+  text-decoration: none;
 }
-
-
 
 .potato-icon {
-    height: 200px;
+  height: 200px;
 }
 h1 {
-    color: #744529;
-    font-weight: 900; 
-    font-size: 80px;
-    line-height: 65px;
-    margin-bottom: 30px;
-    text-shadow: 3px 3px 1px #00000044; 
-    opacity: 0;
-      /* @keyframes duration | timing-function | delay | 
+  color: #744529;
+  font-weight: 900;
+  font-size: 80px;
+  line-height: 65px;
+  margin-bottom: 30px;
+  text-shadow: 3px 3px 1px #00000044;
+  opacity: 0;
+  /* @keyframes duration | timing-function | delay | 
 iteration-count | direction | fill-mode | play-state | name */
-    animation: .5s ease-in-out .5s 1 forwards normal homeHeadAnim
+  animation: 0.5s ease-in-out 0.5s 1 forwards normal homeHeadAnim;
 }
 @keyframes homeHeadAnim {
-
-    40%{
-        opacity: 1;
-    }
-    50% {
-        transform: skewX(-8deg);
-    }
-    75%{
-        transform: skewX(12deg);
-    }
-    100%{
-        opacity: 1;
-    }
+  40% {
+    opacity: 1;
+  }
+  50% {
+    transform: skewX(-8deg);
+  }
+  75% {
+    transform: skewX(12deg);
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 #home h2 {
-    font-size: 35px; 
-    animation-name: homeH2Anim; 
-    position: relative;
-    line-height: 100%;
-    opacity: 0;
-    animation-delay: .7s;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards; 
+  font-size: 35px;
+  animation-name: homeH2Anim;
+  position: relative;
+  line-height: 100%;
+  opacity: 0;
+  animation-delay: 0.7s;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
 }
-@keyframes homeH2Anim{
-    0%{
-        top: 20px;
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-        top: 0;
-    }
+@keyframes homeH2Anim {
+  0% {
+    top: 20px;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
 }
 
-body{
-    background-color: #444343;
+body {
+  background-color: #444343;
 }
 /*seting height for every page*/
 
-.main{
-    display: grid;
-    grid-template-columns: auto 700px auto;
-    grid-template-rows: 80vh;
-    place-items: center;
-    position: relative; /*without this footer will stick to #home*/
-    overflow: hidden;
+.main {
+  display: grid;
+  grid-template-columns: auto 900px auto;
+  grid-template-rows: 80vh;
+  place-items: center;
+  position: relative; /*without this footer will stick to #home*/
+  overflow: hidden;
 }
-#home, #contact{
-    padding: 10vh 0;
+#home,
+#contact {
+  padding: 10vh 0;
 }
-#contact{
-    grid-template-rows: 50vh;
+#contact {
+  grid-template-rows: 50vh;
+}
+#home,
+#myWork {
+  background-color: #f6ecbb;
+}
 
+.content {
+  /*2*/
+  /*border: 2px gray solid;*/
+  /*display: none;*/
+  grid-column: 2;
+  align-self: center;
+  padding-top: 45px;
 }
-#home, #myWork{
-    background-color: #F6ECBB;
-}
-
-.content{/*2*/
-    /*border: 2px gray solid;*/
-    /*display: none;*/
-    grid-column: 2;
-    align-self: center;
-    padding-top: 45px;
-}
-#ver{
-    position: absolute;
-    align-self: center;
-    color: gray;
-    font-style: italic;
-    font-size: 0.7em;
-    right: 2%;
-    bottom: 0;
+#ver {
+  position: absolute;
+  align-self: center;
+  color: gray;
+  font-style: italic;
+  font-size: 0.7em;
+  right: 2%;
+  bottom: 0;
 }
 
 /*HOME*/
 
 .header {
-    position: fixed;
-    width: 100%;
-    z-index: 10;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
 }
 .underNav {
-    position: absolute;
-    height: 100%;
-    width: 25%;
-    background-color: rgb(231, 231, 231);
-    left: 0;
-    opacity: .25;
-    transition: left .3s ease-out;
+  position: absolute;
+  height: 100%;
+  width: 25%;
+  background-color: rgb(231, 231, 231);
+  left: 0;
+  opacity: 0.25;
+  transition: left 0.3s ease-out;
 }
 
 .navigation {
-    position: relative;
-    float: right;
-    background-color: #E0BD4D;
-    margin-top: 10px;
-    margin-right: 10px;
-    transition: .4s; 
+  position: relative;
+  float: right;
+  background-color: #e0bd4d;
+  margin-top: 10px;
+  margin-right: 10px;
+  transition: 0.4s;
 }
 ul {
-    display: flex;
-    position: relative; /* if I dont position this .underNav will go on the nav buttons*/
-    list-style: none;
-    font-weight: 400;
-    width: 500px;
-
+  display: flex;
+  position: relative; /* if I dont position this .underNav will go on the nav buttons*/
+  list-style: none;
+  font-weight: 400;
+  width: 700px;
 }
-ul li{
-    margin: 6px 0;
-    width: 25%; 
+ul li {
+  margin: 6px 0;
+  width: 25%;
 }
 
-
-li a span{
-    position: absolute;
-    background-color: #0000006c;
-    width: 25%;
-    height: 2%;
-    left: 0;
-    bottom: 0;
-    transform: scaleX(0);
-    transition: transform 0.3s;
+li a span {
+  position: absolute;
+  background-color: #0000006c;
+  width: 25%;
+  height: 2%;
+  left: 0;
+  bottom: 0;
+  transform: scaleX(0);
+  transition: transform 0.3s;
 }
 @media (hover: hover) {
-li a:hover span {
+  li a:hover span {
     transform: scaleX(1);
-}}
-li:nth-child(2) a span{
-    left: 25%;
+  }
 }
-li:nth-child(3) a span{
-    left: 50%;
+li:nth-child(2) a span {
+  left: 25%;
 }
-li:nth-child(4) a span{
-    left: 75%;
+li:nth-child(3) a span {
+  left: 50%;
 }
-li a:before{
-    content: "";
-    display:inline-block;
-    height:15px;
-    width:15px;
-    position: relative;
-    background-size: 15px 15px;
-    right: 3px;
+li:nth-child(4) a span {
+  left: 75%;
 }
-li a{
-    transition: color 0.3s;
+li a:before {
+  content: "";
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  position: relative;
+  background-size: 15px 15px;
+  right: 3px;
+}
+li a {
+  transition: color 0.3s;
 }
 @media (hover: hover) {
-li a:hover{
+  li a:hover {
     color: rgb(236, 231, 231);
-}
+  }
 }
 li #home-link:before {
-    background-image: url(files/icons-menu/home.svg);
-    background-repeat: no-repeat;
+  background-image: url(files/icons-menu/home.svg);
+  background-repeat: no-repeat;
 }
 li #about-link:before {
-    background-image: url(files/icons-menu/about.svg);
-    background-repeat: no-repeat;
+  background-image: url(files/icons-menu/about.svg);
+  background-repeat: no-repeat;
 }
 li #myWork-link:before {
-    background-image: url(files/icons-menu/mywork.svg);
-    background-repeat: no-repeat;
-    top: 2px;
+  background-image: url(files/icons-menu/mywork.svg);
+  background-repeat: no-repeat;
+  top: 2px;
 }
 li #contact-link:before {
-    background-image: url(files/icons-menu/contact.svg);
-    background-repeat: no-repeat;
-    top: 2px;
+  background-image: url(files/icons-menu/contact.svg);
+  background-repeat: no-repeat;
+  top: 2px;
 }
 /* -------- end of HOME*/
 
-
-
-
-
 /*about*/
- #about { /*1*/
-    background-color: #744529; /*overwrite background color*/
-    grid-template-rows: auto;
-    padding: 10vh 0;
+#about {
+  /*1*/
+  background-color: #744529; /*overwrite background color*/
+  grid-template-rows: auto;
+  padding: 10vh 0;
 }
-.about h3{
-    color: white;
-    font-size: 38px;
-    font-weight: 900;
-    text-transform: capitalize;
-    line-height: 37px;
-    letter-spacing: -1px;
-    text-shadow: 3px 3px 1px #00000044;
-    transition: font-size 1s;
+.about h3 {
+  color: white;
+  font-size: 38px;
+  font-weight: 900;
+  text-transform: capitalize;
+  line-height: 37px;
+  letter-spacing: -1px;
+  text-shadow: 3px 3px 1px #00000044;
+  transition: font-size 1s;
 }
-.about p{
-    color: white;
-    font-weight: 400;
-    font-size: 1.15em;
-    transition: color 1s;
-    padding: 0 20px;
-}
-
-
-.about-vsCode { /*4*/
-    height: 252px;
-    border: 0.7px black solid;
-    background-color: #272A37;
-    position: relative;
-    transform: translateX(0);
-    opacity: 1;
-    transition: all 1s ease;
+.about p {
+  color: white;
+  font-weight: 400;
+  font-size: 1.15em;
+  transition: color 1s;
+  padding: 0 20px;
 }
 
-.about-vsCode-tab { /*5*/
-    height: 23px;
-    width: 128px;
-    position: relative;
-    background-color: #272A37;
-    bottom: 23px;
-    right: 2px;
-    border-radius: 5px 5px 0 0;
-    border: 1px solid #707070;
-    border-bottom-color: transparent;
+.about-vsCode {
+  /*4*/
+  height: 252px;
+  border: 0.7px black solid;
+  background-color: #272a37;
+  position: relative;
+  transform: translateX(0);
+  opacity: 1;
+  transition: all 1s ease;
+}
+
+.about-vsCode-tab {
+  /*5*/
+  height: 23px;
+  width: 128px;
+  position: relative;
+  background-color: #272a37;
+  bottom: 23px;
+  right: 2px;
+  border-radius: 5px 5px 0 0;
+  border: 1px solid #707070;
+  border-bottom-color: transparent;
 }
 .about-vsCode-tab p {
-    color: #a09a9a;
-    font-size: 13px;
-    font-family: Courier, monospace;
-    position: relative;
-    top: 2px;
+  color: #a09a9a;
+  font-size: 13px;
+  font-family: Courier, monospace;
+  position: relative;
+  top: 2px;
 }
 /*code style inside*/
-.about-vsCode-snippet p{
-    font-family: Courier, monospace;
-    font-size: 20px;
-    text-align: left;
-    padding: 6px;
-    line-height: 28px;
-    position: relative;
-    bottom: 15px;
+.about-vsCode-snippet p {
+  font-family: Courier, monospace;
+  font-size: 20px;
+  text-align: left;
+  padding: 6px;
+  line-height: 28px;
+  position: relative;
+  bottom: 15px;
 }
-.about-vsCode-snippet span{
-    font-family: Courier, monospace;
-    font-size: 20px;
+.about-vsCode-snippet span {
+  font-family: Courier, monospace;
+  font-size: 20px;
 }
 .cdNum {
-    color: #5D72A8;    
+  color: #5d72a8;
 }
-.cdTag{
-    color: #FB69BF; 
+.cdTag {
+  color: #fb69bf;
 }
-.cdFunc{
-    color: #31FF69; 
+.cdFunc {
+  color: #31ff69;
 }
 .cdProp {
-    color: #5CE9FC;
+  color: #5ce9fc;
 }
 .cdQuo {
-    color: #EEFB7A;
+  color: #eefb7a;
 }
 
 .skills {
-    flex-direction: column;
-    list-style-type: square;
-    margin: 0 auto;
+  flex-direction: column;
+  list-style-type: square;
+  margin: 0 auto;
 }
 .skills > li {
-    color: white;
-    width: 100%;
+  color: white;
+  width: 100%;
 }
 
-#about-content a img{
-    margin-top: 10px;
+#about-content a img {
+  margin-top: 10px;
 }
 /* -------- end of ABOUT*/
 
 /* my work => make it flex box */
 
-.myWork{
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    /* width: 100vw; */
-} 
-.MyWorkContent{
-    width: 100%;
-    max-width: 700px;
-    margin: 0 auto;
-    margin-bottom: 70px;
+.myWork {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+  align-content: space-around;
+  padding: 40px 0;
 }
-.myWork h1{
-    font-size: 3em;
-    margin-bottom: 0;
-    transition: all 0.2s;
+.MyWorkContent {
+  width: 100%;
+  max-width: 500px;
+
+  /* margin-bottom: 70px; */
 }
-.myWork h1:hover{
-    color: #a35f38;
-    font-size: 3.2em;
-    /* margin-top: 30px;
-    margin-bottom: 0; */
+.myWork h1 {
+  font-size: 2em;
+  margin-bottom: 0;
+  transition: all 0.2s;
 }
 
-.myWork h2{
-    background-color: khaki;
-    margin: 60px 0;
+.myWork h1 {
+  flex: 1 100%;
 }
 .myWork p {
-    margin: 0 15px;
+  margin: 0 15px;
 }
 .imgCover {
-    width: 100%;
-    margin: 5px auto;
-    transition: all 0.2s;
+  width: 100%;
+  margin: 5px auto;
+  transition: all 0.2s;
 }
-.imgCover:hover{
+@media (hover: hover) {
+  .MyWorkContent:hover .imgCover {
     filter: brightness(0.4);
-filter: contrast(110%);
+    filter: contrast(120%);
+    transform: scale(1.05);
+  }
 }
-.MyWorkContent ul{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    list-style-type: square;
-    width: 100%;
+.MyWorkContent ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  list-style-type: square;
+  width: 100%;
 }
-.MyWorkContent h4{
-    text-align: left;
-    margin-left: 10px;
-
+.MyWorkContent h4 {
+  text-align: left;
+  margin-left: 10px;
 }
-.MyWorkContent li, .MyWorkContent a{
-    width: 90%;
-    text-align: left;
-    margin-left: 32px;
+.MyWorkContent li,
+.MyWorkContent a {
+  width: 90%;
+  text-align: left;
+  margin-left: 32px;
 }
-.MyWorkContent a{
-    color: tomato;
+.MyWorkContent a {
+  color: tomato;
 }
 
 /* -- end of MY WORK -- */
 
-
 /*contact*/
-.potatoContent{
-    position: relative;
+.potatoContent {
+  position: relative;
 }
 
-.potatoShape{
-    height: 370px;
-    width: 689px;
-    border-radius: 80% 89% 100% 68% / 90% 100% 71% 84%  ;
-    background-color: gray;
-    opacity: 0.2;
-    margin: 10px;
-    position: relative;
-    bottom: 80px;
-    left: 35px;
-    z-index: 0;
+.potatoShape {
+  height: 370px;
+  width: 689px;
+  border-radius: 80% 89% 100% 68% / 90% 100% 71% 84%;
+  background-color: gray;
+  opacity: 0.2;
+  margin: 10px;
+  position: relative;
+  bottom: 80px;
+  left: 35px;
+  z-index: 0;
 }
-.contact h4{
-    position: relative;
-    z-index: 1;
-    font-size: 20px;
-    font-style: italic;
-    font-weight: 200;
-    color: white;
-    text-align: center;
-    letter-spacing: 2px;
+.contact h4 {
+  position: relative;
+  z-index: 1;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 200;
+  color: white;
+  text-align: center;
+  letter-spacing: 2px;
 }
 form {
-    position: absolute;
-    margin-left: 210px;
-    text-align: left;
-    z-index: 1;
+  position: absolute;
+  margin-left: 210px;
+  text-align: left;
+  z-index: 1;
 }
-.contact label{
-    text-align: left;
-    color: white;
+.contact label {
+  text-align: left;
+  color: white;
 }
-.contact input{
-    width: 100%;
-    text-align: left;
-    outline: none;
-
+.contact input {
+  width: 100%;
+  text-align: left;
+  outline: none;
 }
 #message {
-    color: white;
-    height: 130px;
-    width: 370px;
-    text-align: left;
-    padding: 8px;
-    margin-top: 3px;
-    background-color: inherit;
-    resize: none;
-    border: 1px solid lightgray;
-    overflow: auto;
-    outline: none; /*removes the outline(when you select it it won't show
+  color: white;
+  height: 130px;
+  width: 370px;
+  text-align: left;
+  padding: 8px;
+  margin-top: 3px;
+  background-color: inherit;
+  resize: none;
+  border: 1px solid lightgray;
+  overflow: auto;
+  outline: none; /*removes the outline(when you select it it won't show
     the blue stupid effect*/
 }
-::placeholder{
-    color: whitesmoke;
+::placeholder {
+  color: whitesmoke;
 }
-#submit{
-    width: 100px;
-    height: 30px;
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-    background-color: white;
-    color: black;
-    font-style: 900;
-} 
+#submit {
+  width: 100px;
+  height: 30px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  background-color: white;
+  color: black;
+  font-style: 900;
+}
 /*new contact page*/
 .potatoContent h2 {
-    color: white;
+  color: white;
 }
-.potatoContent h3{
-    color: white;
+.potatoContent h3 {
+  color: white;
 }
-.emailAdd{
-    transform: translateX(0);
-    opacity: 1;
-    transition: all .5s ease;
+.emailAdd {
+  transform: translateX(0);
+  opacity: 1;
+  transition: all 0.5s ease;
 }
 /* -------- end of CONTACT*/
 
-
 .footer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    height: 120px;
-    width: 100%;
-    background-color: #744529;
-    bottom: 0;
-    z-index: 4;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  width: 100%;
+  background-color: #744529;
+  bottom: 0;
+  z-index: 4;
 }
-.footer a{
-
-    color: rgb(214, 212, 212);
-    display: block;
-    font-size: 12px;
-    margin: 5px;
+.footer a {
+  color: rgb(214, 212, 212);
+  display: block;
+  font-size: 12px;
+  margin: 5px;
+}
+.footer .secret{
+    position: absolute;
+    left: 10px;
+    font-size: 8px;
+    transform: rotate(-20deg);
+    color: #925938;
 }
 @media (hover: hover) {
-.footer a:hover{
-    color:white;
+  .footer a:hover {
+    color: white;
+  }
+  .footer p:hover {
+    color: white;
+  }
 }
-.footer p:hover{
-    color:white;
-}}
-.footer p{
-
-    color: #F6ECBB;
-    font-size: 15px;
+.footer p {
+  color: #f6ecbb;
+  font-size: 15px;
 }
-.footer div{
-    /* margin: 0 auto; */
-    margin-right: 10%;
-    margin-left: 2%;
+.footer div {
+  /* margin: 0 auto; */
+  margin-right: 10%;
+  margin-left: 2%;
 }
 
 .leftAnim {
-    opacity: 0;
-    transform: translateX(-200px);
+  opacity: 0;
+  transform: translateX(-200px);
 }
 
-
 /* media queries ---------------------------- */
-@media only screen 
-  and (max-width: 667px) {
+@media only screen and (max-width: 914px) {
   /* and (-webkit-min-device-pixel-ratio: 2) {  */
-      /*seting height for every page*/
-      .potato-icon {
-        height: 120px;
-    }
-ul {
+  /*seting height for every page*/
+  .potato-icon {
+    height: 120px;
+  }
+  ul {
     justify-content: center;
     font-size: 12px;
     width: 100vw;
-}
-li a span{
+  }
+  li a span {
     display: none;
-}
-.main{
+  }
+  .main {
     display: grid;
     grid-template-columns: 100vw;
     grid-template-rows: auto auto;
     place-items: center;
-}
-.content{/*2*/
+  }
+  .content {
+    /*2*/
     /*border: 2px gray solid;*/
     /*display: none;*/
     grid-column: 1;
     grid-row: 2;
     padding: 0 50px;
     /* margin-bottom: 0%; */
-}
-.about h3{
+  }
+  .about h3 {
     font-size: 22px;
-}
-.about p{
+  }
+  .about p {
     font-weight: 200;
     font-size: 1em;
-}
-.potatoContent{
+  }
+  .potatoContent {
     position: relative;
     /* margin-bottom: 20%; */
-}
+  }
 
-#home, #myWork{
-    background-color: #F6ECBB;
-}
+  #home,
+  #myWork {
+    background-color: #f6ecbb;
+  }
 
-.navigation {
+  .navigation {
     position: relative;
     margin: 0;
-
-}
-li a:before{
-    display:none;
-}
-h1{
+  }
+  li a:before {
+    display: none;
+  }
+  h1 {
     font-size: 40px;
     line-height: 30px;
-}
-h2{
+  }
+  h2 {
     font-size: 22px;
-}
-#home h2{
-    font-size: 20px
-}
-.about-vsCode { /*4*/
+  }
+  #home h2 {
+    font-size: 20px;
+  }
+  .about-vsCode {
+    /*4*/
     display: none;
-}
+  }
 
-.myWorkContent{
+  .myWorkContent {
     display: flex;
     /*background-color: rgb(54, 43, 43);*/
     height: 85vh;
     width: 100%;
     align-items: center;
     justify-content: center;
-}
-.potatoContent h3 {
+  }
+  .potatoContent h3 {
     font-size: 20px;
-}
-.quoteFooter{
+  }
+  .quoteFooter {
     display: none;
-}
-.myWork h1{
+  }
+  .myWork h1 {
     font-size: 1.5em;
     margin: 0;
+  }
 
+  .myWork p {
+    font-size: 0.8em;
+  }
 }
-
-.myWork p{
-    font-size: .8em;
-}
-
-}
-@media only screen and (max-width: 310px){
-.myWork h1{
+@media only screen and (max-width: 310px) {
+  .myWork h1 {
     font-size: 1em;
-
-}
-.myWork h2{
+  }
+  .myWork h2 {
     font-size: 1em;
-}
-.myWorkContent a{
+  }
+  .myWorkContent a {
     margin: 0;
-}
+  }
 }
 
 /*fixing height responsivenes*/
-@media only screen and (max-height: 562px){
-
-    .main{
-        grid-template-rows: auto;
-    }
-    .potatoContent{
-        padding-top: 20px;
-    }
-    .about-vsCode { /*4*/
-        margin-bottom: 40px;
-    }
+@media only screen and (max-height: 562px) {
+  .main {
+    grid-template-rows: auto;
+  }
+  .potatoContent {
+    padding-top: 20px;
+  }
+  .about-vsCode {
+    /*4*/
+    margin-bottom: 40px;
+  }
 }
 
-  /*source for shapes: 
+/*source for shapes: 
   https://9elements.github.io/fancy-border-radius/full-control.html#45.35.10.44-73.56.47.80-.
   */
 
-  /*css flexbox good article:
+/*css flexbox good article:
   https://css-tricks.com/snippets/css/a-guide-to-flexbox/
   */
- /* syntax highlighting */
- /* media queries
+/* syntax highlighting */
+/* media queries
   https://css-tricks.com/snippets/css/media-queries-for-standard-devices/ */
 
 /* important shotcuts cmd + opt + [ or ] fold sth
