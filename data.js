@@ -1,6 +1,6 @@
 const work =[
     {
-        'title': 'Juanpamusic.com',
+        'title': 'Juanpamusic.com (November 2021)',
         'img': './files/juanpamusic.png',
         'short-desc': 'A musician portfolio app with ReactJs',
         'date': 'November 2021',
@@ -13,7 +13,7 @@ const work =[
         'github': ['https://github.com/starchcode/juanpamusic'],
     },
     {
-        'title': 'Relationship App',
+        'title': 'Relationship App (full stack app sample)',
         'img': './files/relationshipapp.png',
         'short-desc': 'An app that shows relationship between two people',
         'date': 'February 2021',
@@ -26,7 +26,7 @@ const work =[
         'github': ['https://github.com/starchcode/relationship_app'],
     },
     {
-        'title': 'theGingerBlondieBakery.ie',
+        'title': 'theGingerBlondieBakery.ie 2020-11 - not live',
         'img': './files/gingerscrshot.png',
         'short-desc': 'a website for a food brand based in Dublin, Ireland',
         'date': 'December 2020',
@@ -37,12 +37,12 @@ const work =[
             'NodeJs (expressJS): use of nodemailer for contact form to keep the costs down since it is not a high traffic website at the moment.',
             'LEMP stack'
         ],
-        'project-link': 'http://thegingerblondie.ie/',
+        'project-link': 'https://github.com/starchcode/gingerblondiebackend',
         'github': ['https://github.com/starchcode/gingerblondiebakery', 'https://github.com/starchcode/gingerblondiebackend'],
         // 'youtube': '<iframe width="90%" height="250px" src="https://www.youtube.com/embed/VUemFXpmCDU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
     },
     {
-        'title': 'CashewTree.ie',
+        'title': 'CashewTree.ie - 2020-11 - not live',
         'img': 'files/cashewscrshot.png',
         'short-desc': 'a website for a food brand based in Dublin, Ireland',
         'date': 'October 20',
@@ -51,7 +51,7 @@ const work =[
             'HTML & CSS','Use of Wordpress as headless CMS so the client can interact with the website. Website is dynamic thanks to  the Wordpress API.'
             , 'jQuery for handling animations and JavaScript to handle menu animations and more.'
         ],
-        'project-link': 'http://cashewtree.ie/',
+        'project-link': 'https://github.com/starchcode/cashewtree.ie',
         'github': ['https://github.com/starchcode/cashewtree.ie']
     }
 ]
